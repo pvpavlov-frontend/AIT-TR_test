@@ -7,48 +7,21 @@ public class Main {
     }
 
     public static  String getTypeOfMonthWithSwitchStatement(int day, int month, int year) {
-        String typeOfMonth;
-        switch (month) {
-            case 1:
-                typeOfMonth = " January ";
-                break;
-            case 2:
-                typeOfMonth = " February ";
-                break;
-            case 3:
-                typeOfMonth = " March ";
-                break;
-            case 4:
-                typeOfMonth = " April ";
-                break;
-            case 5:
-                typeOfMonth = " May ";
-                break;
-            case 6:
-                typeOfMonth = " June ";
-                break;
-            case 7:
-                typeOfMonth = " July ";
-                break;
-            case 8:
-                typeOfMonth = " August ";
-                break;
-            case 9:
-                typeOfMonth = " September ";
-                break;
-            case 10:
-                typeOfMonth = " October ";
-                break;
-            case 11:
-                typeOfMonth = " November ";
-                break;
-            case 12:
-                typeOfMonth = " December ";
-                break;
-
-            default:
-                throw new IllegalArgumentException("Invalid month: " + month);
-        }
-        return (day<10 ? "0" : "") + day + "." + typeOfMonth + year;
+        String typeOfMonth = switch (month) {
+            case 1 -> " January ";
+            case 2 -> " February ";
+            case 3 -> " March ";
+            case 4 -> " April ";
+            case 5 -> " May ";
+            case 6 -> " June ";
+            case 7 -> " July ";
+            case 8 -> " August ";
+            case 9 -> " September ";
+            case 10 -> " October ";
+            case 11 -> " November ";
+            case 12 -> " December ";
+            default -> throw new IllegalArgumentException("Invalid month: " + month);
+        };
+        return (day<10 ? "0" : "") + day + ".q" + typeOfMonth + year;
     }
 }
