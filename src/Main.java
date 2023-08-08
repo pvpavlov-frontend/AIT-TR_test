@@ -49,6 +49,6 @@ public class Main {
             default:
                 throw new IllegalArgumentException("Invalid month: " + month);
         }
-        return day + typeOfMonth + year;
+        return (day<10 ? "0" : "") + day + "." + typeOfMonth + year;
     }
 }
