@@ -36,6 +36,16 @@ public class Main {
             case 9:
                 typeOfMonth = " September ";
                 break;
+            case 10:
+                typeOfMonth = " October ";
+                break;
+            case 11:
+                typeOfMonth = " November ";
+                break;
+            case 12:
+                typeOfMonth = " December ";
+                break;
+
             default:
                 throw new IllegalArgumentException("Invalid month: " + month);
         }
